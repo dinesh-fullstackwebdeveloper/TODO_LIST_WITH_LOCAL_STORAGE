@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD with Local Storage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <h1>TODO LIST WITH LOCAL STORAGE</h1>
+        <form action="" id="dataForm">
+            <label for="nameInput">Name</label>
+            <input type="text" id="nameInput" required/>
+            <label for="ageInput">Age</label>
+            <input type="number" id="ageInput" required/>
+            <label for="genderSelect">Gender</label>
+            <select id="genderSelect">
+                <option value="">--Select--</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <button type="submit">Add Data</button>
+        </form>
+        <div id="output">
+            <h3>Stored Data</h3>
+            <table id="dataTable">
+                <thead>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody id="dataList">
+                    <!-- <tr>
+                        <td>Dinesh</td>
+                        <td>21</td>
+                        <td>Male</td>
+                        <td>
+                            <button type="button" class="btnEdit">Edit</button>
+                        </td>
+                        <td>
+                            <button type="button" class="btnDelete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Dinesh</td>
+                        <td>21</td>
+                        <td>Male</td>
+                        <td>
+                            <button type="button" class="btnEdit">Edit</button>
+                        </td>
+                        <td>
+                            <button type="button" class="btnDelete">Delete</button>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Edit Data</h3>
+            <form action="" id="editDataForm">
+                <input type="hidden" id="editIndex">
+                <label for="editNameInput">Name</label>
+                <input type="text" id="editNameInput" required/>
+                <label for="editAgeInput">Age</label>
+                <input type="number" id="editAgeInput" required/>
+                <label for="editGenderSelect">Gender</label>
+                <select id="editGenderSelect">
+                    <option value="">--Select--</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
